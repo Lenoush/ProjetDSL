@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/L3IA_ProjetHTML/src-gen" creationIcons="false"
+    editDirectory="/L3IA_ProjetHTML.edit/src-gen" editorDirectory="/L3IA_ProjetHTML.editor/src-gen"
+    modelPluginID="L3IA_ProjetHTML" modelName="L3IA_ProjetHTML" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>l3IA_ProjetHTML.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="L3IA_ProjetHTML" disposableProviderFactory="true" ecorePackage="l3IA_ProjetHTML.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="l3IA_ProjetHTML.ecore#//TypeGraph">
+      <genEnumLiterals ecoreEnumLiteral="l3IA_ProjetHTML.ecore#//TypeGraph/Bar"/>
+      <genEnumLiterals ecoreEnumLiteral="l3IA_ProjetHTML.ecore#//TypeGraph/Scatter"/>
+      <genEnumLiterals ecoreEnumLiteral="l3IA_ProjetHTML.ecore#//TypeGraph/Box"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="l3IA_ProjetHTML.ecore#//FonctionComparaisonQuanti">
+      <genEnumLiterals ecoreEnumLiteral="l3IA_ProjetHTML.ecore#//FonctionComparaisonQuanti/inf"/>
+      <genEnumLiterals ecoreEnumLiteral="l3IA_ProjetHTML.ecore#//FonctionComparaisonQuanti/sup"/>
+      <genEnumLiterals ecoreEnumLiteral="l3IA_ProjetHTML.ecore#//FonctionComparaisonQuanti/egal"/>
+      <genEnumLiterals ecoreEnumLiteral="l3IA_ProjetHTML.ecore#//FonctionComparaisonQuanti/different"/>
+      <genEnumLiterals ecoreEnumLiteral="l3IA_ProjetHTML.ecore#//FonctionComparaisonQuanti/infegal"/>
+      <genEnumLiterals ecoreEnumLiteral="l3IA_ProjetHTML.ecore#//FonctionComparaisonQuanti/supegal"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="l3IA_ProjetHTML.ecore#//FonctionComparaisonQuali">
+      <genEnumLiterals ecoreEnumLiteral="l3IA_ProjetHTML.ecore#//FonctionComparaisonQuali/egal"/>
+      <genEnumLiterals ecoreEnumLiteral="l3IA_ProjetHTML.ecore#//FonctionComparaisonQuali/different"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="l3IA_ProjetHTML.ecore#//FonctionAgregation">
+      <genEnumLiterals ecoreEnumLiteral="l3IA_ProjetHTML.ecore#//FonctionAgregation/median"/>
+      <genEnumLiterals ecoreEnumLiteral="l3IA_ProjetHTML.ecore#//FonctionAgregation/sum"/>
+      <genEnumLiterals ecoreEnumLiteral="l3IA_ProjetHTML.ecore#//FonctionAgregation/mean"/>
+      <genEnumLiterals ecoreEnumLiteral="l3IA_ProjetHTML.ecore#//FonctionAgregation/min"/>
+      <genEnumLiterals ecoreEnumLiteral="l3IA_ProjetHTML.ecore#//FonctionAgregation/max"/>
+      <genEnumLiterals ecoreEnumLiteral="l3IA_ProjetHTML.ecore#//FonctionAgregation/count"/>
+      <genEnumLiterals ecoreEnumLiteral="l3IA_ProjetHTML.ecore#//FonctionAgregation/std"/>
+      <genEnumLiterals ecoreEnumLiteral="l3IA_ProjetHTML.ecore#//FonctionAgregation/var"/>
+    </genEnums>
+    <genClasses ecoreClass="l3IA_ProjetHTML.ecore#//Dashboard">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference l3IA_ProjetHTML.ecore#//Dashboard/ownedGraphRealisation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute l3IA_ProjetHTML.ecore#//Dashboard/name"/>
+    </genClasses>
+    <genClasses ecoreClass="l3IA_ProjetHTML.ecore#//GraphRealisation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference l3IA_ProjetHTML.ecore#//GraphRealisation/ownedImport"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference l3IA_ProjetHTML.ecore#//GraphRealisation/ownedFilter"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference l3IA_ProjetHTML.ecore#//GraphRealisation/ownedGraphMaker"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference l3IA_ProjetHTML.ecore#//GraphRealisation/ownedGraphUpdate"/>
+    </genClasses>
+    <genClasses ecoreClass="l3IA_ProjetHTML.ecore#//ImportData">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute l3IA_ProjetHTML.ecore#//ImportData/delimeter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute l3IA_ProjetHTML.ecore#//ImportData/name"/>
+    </genClasses>
+    <genClasses ecoreClass="l3IA_ProjetHTML.ecore#//FilterData"/>
+    <genClasses ecoreClass="l3IA_ProjetHTML.ecore#//FilterCompare"/>
+    <genClasses ecoreClass="l3IA_ProjetHTML.ecore#//CompareQuali">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute l3IA_ProjetHTML.ecore#//CompareQuali/somethingtocompare"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute l3IA_ProjetHTML.ecore#//CompareQuali/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute l3IA_ProjetHTML.ecore#//CompareQuali/comparaison"/>
+    </genClasses>
+    <genClasses ecoreClass="l3IA_ProjetHTML.ecore#//CompareQuanti">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute l3IA_ProjetHTML.ecore#//CompareQuanti/somethingtocompare"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute l3IA_ProjetHTML.ecore#//CompareQuanti/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute l3IA_ProjetHTML.ecore#//CompareQuanti/comparaison"/>
+    </genClasses>
+    <genClasses ecoreClass="l3IA_ProjetHTML.ecore#//FilterNotNull">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute l3IA_ProjetHTML.ecore#//FilterNotNull/name"/>
+    </genClasses>
+    <genClasses ecoreClass="l3IA_ProjetHTML.ecore#//FilterGroupBy">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute l3IA_ProjetHTML.ecore#//FilterGroupBy/nameColumnsX"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute l3IA_ProjetHTML.ecore#//FilterGroupBy/nameColumnsY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute l3IA_ProjetHTML.ecore#//FilterGroupBy/fonctionAgregation"/>
+    </genClasses>
+    <genClasses ecoreClass="l3IA_ProjetHTML.ecore#//GraphMaker">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute l3IA_ProjetHTML.ecore#//GraphMaker/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute l3IA_ProjetHTML.ecore#//GraphMaker/nameAbscisse"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute l3IA_ProjetHTML.ecore#//GraphMaker/nameOrdonnees"/>
+    </genClasses>
+    <genClasses ecoreClass="l3IA_ProjetHTML.ecore#//GraphUpdate"/>
+    <genClasses ecoreClass="l3IA_ProjetHTML.ecore#//UpdateCouleurGraph">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute l3IA_ProjetHTML.ecore#//UpdateCouleurGraph/couleur"/>
+    </genClasses>
+    <genClasses ecoreClass="l3IA_ProjetHTML.ecore#//UpdateNameAxeY">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute l3IA_ProjetHTML.ecore#//UpdateNameAxeY/name"/>
+    </genClasses>
+    <genClasses ecoreClass="l3IA_ProjetHTML.ecore#//UpdateNameAxeX">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute l3IA_ProjetHTML.ecore#//UpdateNameAxeX/name"/>
+    </genClasses>
+    <genClasses ecoreClass="l3IA_ProjetHTML.ecore#//UpdateNameLegend">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute l3IA_ProjetHTML.ecore#//UpdateNameLegend/oldname"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute l3IA_ProjetHTML.ecore#//UpdateNameLegend/newname"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
