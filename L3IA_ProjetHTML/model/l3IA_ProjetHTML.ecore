@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="l3IA_ProjetHTML" nsURI="http://www.example.org/l3IA_ProjetHTML"
+    nsPrefix="l3IA_ProjetHTML">
+  <eClassifiers xsi:type="ecore:EClass" name="Dashboard">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownedGraphRealisation"
+        lowerBound="1" upperBound="4" eType="#//GraphRealisation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GraphRealisation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownedImport" lowerBound="1"
+        eType="#//ImportData" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownedFilter" upperBound="-1"
+        eType="#//FilterData" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownedGraphMaker" lowerBound="1"
+        eType="#//GraphMaker" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownedGraphUpdate" upperBound="-1"
+        eType="#//GraphUpdate" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TypeGraph">
+    <eLiterals name="Bar"/>
+    <eLiterals name="Scatter"/>
+    <eLiterals name="Box" literal="Box"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ImportData">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="delimeter" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FilterData"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FilterCompare" eSuperTypes="#//FilterData"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CompareQuali" eSuperTypes="#//FilterCompare">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="somethingtocompare" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="comparaison" lowerBound="1"
+        eType="#//FonctionComparaisonQuali"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CompareQuanti" eSuperTypes="#//FilterCompare">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="somethingtocompare" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="comparaison" lowerBound="1"
+        eType="#//FonctionComparaisonQuanti"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="FonctionComparaisonQuanti">
+    <eLiterals name="inf" literal="&lt;"/>
+    <eLiterals name="sup" literal=">"/>
+    <eLiterals name="egal" literal="=="/>
+    <eLiterals name="different" literal="!="/>
+    <eLiterals name="infegal" literal="&lt;="/>
+    <eLiterals name="supegal" literal=">="/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="FonctionComparaisonQuali">
+    <eLiterals name="egal" literal="=="/>
+    <eLiterals name="different" literal="!="/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FilterNotNull" eSuperTypes="#//FilterData">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FilterGroupBy" eSuperTypes="#//FilterData">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nameColumnsX" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nameColumnsY" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fonctionAgregation" lowerBound="1"
+        eType="#//FonctionAgregation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="FonctionAgregation">
+    <eLiterals name="median"/>
+    <eLiterals name="sum"/>
+    <eLiterals name="mean"/>
+    <eLiterals name="min"/>
+    <eLiterals name="max"/>
+    <eLiterals name="count"/>
+    <eLiterals name="std"/>
+    <eLiterals name="var"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GraphMaker">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//TypeGraph"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nameAbscisse" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nameOrdonnees" lowerBound="1"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GraphUpdate"/>
+  <eClassifiers xsi:type="ecore:EClass" name="UpdateCouleurGraph" eSuperTypes="#//GraphUpdate">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="couleur" lowerBound="1"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UpdateNameAxeY" eSuperTypes="#//GraphUpdate">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UpdateNameAxeX" eSuperTypes="#//GraphUpdate">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UpdateNameLegend" eSuperTypes="#//GraphUpdate">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="oldname" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="newname" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+</ecore:EPackage>
