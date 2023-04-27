@@ -1,0 +1,46 @@
+NameDashboard : "4 Graphiques "
+
+CSV : "/Users/lenaoudjman/Desktop/ProjetDsl/Senar4/happiness.csv"
+Delimiter : ";"
+TypeOfGraph : Nuage de point
+Abscissa : "Country"
+Ordinate(s) : "Mean"
+NotNull : "Country"
+ComparisonColumnsWithString "Gender" == "Female"
+Color(s) graph : "red"
+Transformation "Mean" in "Female"
+TitleAxeX : "Abreviation Pays "
+TitleAxeY : "Moyenne sur 10 "
+
+CSV : '/Users/lenaoudjman/Desktop/ProjetDsl/Senar5/gini2.csv'
+Delimiter : ";"
+TypeOfGraph : Bar
+Abscissa : "GINI index"
+Ordinate(s) : "Estonia" "Thailand" "Ghana" 
+TitleAxeX : "Date"
+TitleAxeY : "Pourcentage dinegalité"
+Color(s) graph : "green" "blue" "red"
+
+
+
+CSV : '/Users/lenaoudjman/Desktop/ProjetDsl/Senar1/cars.csv'
+Delimiter : ";"
+TypeOfGraph : Bar
+Abscissa : "Car"
+Ordinate(s) : "Horsepower"
+ComparisonColumnsWithString "Origin" == "US"
+Group "Horsepower" by "Car" in median
+TitleAxeX : "Marques de Voitures"
+TitleAxeY : "Puissance de Chevaux"
+
+
+CSV : '/Users/lenaoudjman/Desktop/ProjetDsl/Senar2/factbook.csv'
+Delimiter : ";"
+TypeOfGraph : Line
+Abscissa : "Country"
+Ordinate(s) : "Population" "Telephones - mobile cellular"
+NotNull : "Population"
+NotNull : "Telephones - mobile cellular"
+TitleAxeX : "Pays"
+TitleAxeY : "Valeur"
+

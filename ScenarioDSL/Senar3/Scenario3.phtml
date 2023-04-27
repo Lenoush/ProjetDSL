@@ -1,0 +1,24 @@
+NameDashboard : "Amelioration du Scenario 1"
+
+CSV : '/Users/lenaoudjman/Desktop/ProjetDsl/Senar1/cars.csv'
+Delimiter : ";"
+TypeOfGraph : Bar
+Abscissa : "Car"
+Ordinate(s) : "Horsepower"
+
+NotNull : "Horsepower"
+ComparisonColumnsWithNumber "Horsepower"!="0"
+
+ComparisonColumnsWithNumber "Weight" <= "3000"
+ComparisonColumnsWithString "Origin" != "US"
+ComparisonColumnsWithNumber "Cylinders" < "8"
+Group "Horsepower" by "Car" in mean
+
+TitleAxeX : "Marques de Voitures"
+TitleAxeY : "Puissance de Chevaux"
+Transformation "Horsepower" in "Chevaux"
+Color(s) graph : "darkgreen"
+
+
+
+

@@ -1,0 +1,12 @@
+NameDashboard : "Puissance de chevaux par Marque de voiture Americaine."
+
+CSV : '/Users/lenaoudjman/Desktop/ProjetDsl/Senar1/cars.csv'
+Delimiter : ";"
+TypeOfGraph : Bar
+Abscissa : "Car"
+Ordinate(s) : "Horsepower"
+
+ComparisonColumnsWithString "Origin" == "US"
+Group "Horsepower" by "Car" in median
+
+

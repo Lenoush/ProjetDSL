@@ -1,0 +1,26 @@
+NameDashboard : "Comparaison du bonheur entre Homme et Femme en fonction des pays"
+
+CSV : "/Users/lenaoudjman/Desktop/ProjetDsl/Senar4/happiness.csv"
+Delimiter : ";"
+TypeOfGraph : Line
+Abscissa : "Country"
+Ordinate(s) : "Mean"
+NotNull : "Country"
+ComparisonColumnsWithString "Gender" == "Male"
+Color(s) graph : "green"
+Transformation "Mean" in "Male"
+TitleAxeX : "Abreviation Pays "
+TitleAxeY : "Moyenne sur 10 "
+
+CSV : "/Users/lenaoudjman/Desktop/ProjetDsl/Senar4/happiness.csv"
+Delimiter : ";"
+TypeOfGraph : Nuage de point
+Abscissa : "Country"
+Ordinate(s) : "Mean"
+NotNull : "Country"
+ComparisonColumnsWithString "Gender" == "Female"
+Color(s) graph : "red"
+Transformation "Mean" in "Female"
+TitleAxeX : "Abreviation Pays "
+TitleAxeY : "Moyenne sur 10 "
+
